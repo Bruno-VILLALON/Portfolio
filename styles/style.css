@@ -4,13 +4,15 @@
 /*Paramètres généraux*/
 
 :root {
-    --dark-color: #000101;
-    --light-color: #fefeff;
+    --dark-color: #2d3e4e;
+    --medium-color: #8cbdb9;
+    --light-color: #e8eceb;
+    --contrast-color: #e09e50;
 }
 
 *::selection {
-    background: orange;
-    color: #302302;
+    background: var(--contrast-color);
+    color: var(--medium-color);
 }
 html {
     scroll-behavior: smooth;
@@ -52,14 +54,14 @@ a::after {
     position: absolute;
     width: 100%;
     height: 1px;
-    background: var(--light-color);
+    background: var(--contrast-color);
     bottom: -4px;
     left: 0;
 }
 
 a:hover {
     transform: scale(1.04);
-    color: rgba(250, 235, 215, 0.664);
+    color: var(--contrast-color);
 }
 
 a:hover::after {
@@ -224,7 +226,6 @@ h1 {
 
 .about-links img {
     height: 5vw;
-    filter: grayscale(100%);
 }
 
 .skills {
@@ -248,8 +249,6 @@ h1 {
     font-size: calc(1rem + 6vw);
     font-size: bold;
     letter-spacing: 4px;
-    /*background: var(--dark-color);
-    color: var(--light-color);*/
     display: inline-block;
     padding: 0 12px 12px;
 }
@@ -290,7 +289,7 @@ h1 {
     height: 120%;
     width: 120%;
     top: -3px;
-    background: #2d3e4e;
+    background: var(--medium-color);
     transition: width 1s ease-out;
     transition-delay: 0.85s;
 }
@@ -406,7 +405,14 @@ button {
     font-family: inherit;
     border: none;
     border-radius: 1rem;
-    background: greenyellow;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+button {
+    background: var(--contrast-color);
+    
+    font-weight: bold;
 }
 
 textarea {
@@ -418,8 +424,8 @@ footer {
     height: 15vh;
     width: 100%;
     padding: 1rem;
-    background: #000101;
-    color: #fefeff;
+    background: var(--dark-color);
+    color: var(--light-color);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -449,7 +455,6 @@ footer a::after{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-shadow: #fefeff 0.3rem 0.3rem 1rem;
 }
 
 .github {
