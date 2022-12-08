@@ -228,6 +228,10 @@ h1 {
     height: 5vw;
 }
 
+.about-links a::after {
+    display: none;
+}
+
 .skills {
     margin: 200px 0 250px;
 }
@@ -350,6 +354,12 @@ h1 {
     justify-content: space-evenly;
     width: 100%;
     padding: 1rem;
+}
+
+.project-comingsoon {
+    width: 100%;
+    font-size: calc(1.5rem + 2vw);
+    line-height: calc(3rem + 2vw);
 }
 
 .contact {
